@@ -1,0 +1,21 @@
+﻿
+.sec1 {
+    color: navy;
+}
+
+.sec2 {
+    border: 3px solid rgb(0 0 0 / 0.53);
+    background-color: ghostwhite;
+    margin-left: 500px;
+    margin-right: 600px;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width:500px;
+}
+
+footer {
+    margin-top: 170px;
+}
