@@ -5,12 +5,13 @@ input[type=text] {
     padding: 6px 10px;
     margin: 4px 0;
     display: inline-block;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #BDBDBD;
     box-sizing: border-box;
 }
 
 .sec1 {
-    color: navy;
+    font: normal normal bold 28px/37px Roboto;
+    color: #42515F;
 }
 
 .sec2 {
@@ -43,6 +44,21 @@ input[type=text] {
 
 .rb0 input[type=range] {
     margin-left: 90px;
+}
+.button{
+    background-color: #E2E2E2;
+}
+.button:hover {
+        background-color: #969696;
+}
+.submit {
+    background-color: #E2E2E2;
+}
+.submit:hover {
+    background-color: #82A70C;
+}
+.button:hover {
+    background-color: #969696;
 }
 
 footer {

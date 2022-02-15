@@ -127,6 +127,7 @@
     <Content Include="EmployeePayroll.Master" />
     <Content Include="StyleSheets\Payroll Form.css" />
     <Content Include="StyleSheets\SignUp.css" />
+    <Content Include="UserControl.ascx" />
     <Content Include="WebForms\LogIn.aspx" />
     <Content Include="WebForms\payroll Form.aspx" />
     <Content Include="WebForms\SignUp.aspx" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl.ascx.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl.ascx.designer.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
