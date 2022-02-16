@@ -5,15 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
        <div class="form">
            <div class="sec2">
-           <div class="sec1">
-        </div>
         <div><h4>Create Your Account</h4></div>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox1" ForeColor="Red" ValidationExpression="^[A-Z]{1}[a-z]{2,}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox2" ValidationExpression="^[A-Z]{1}[a-z]{2,}$" ForeColor="Red"></asp:RegularExpressionValidator>
         <br />
         <div>
             <asp:TextBox ID="TextBox1" type="text" placeholder="Firstname" required="required" runat="server" Height="33px" Width="186px"></asp:TextBox>
-            <asp:TextBox ID="TextBox2" type="text" placeholder="Username" required="required" runat="server" Height="33px" Width="186px"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" type="text" placeholder="Lastname" required="required" runat="server" Height="33px" Width="186px"></asp:TextBox>
         </div>
            <div>
                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Enter valid email" ControlToValidate="TextBox3" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator><asp:TextBox ID="TextBox3" type="text" placeholder="Username" required="required" runat="server" Height="33px" Width="377px"></asp:TextBox></div>
@@ -35,5 +33,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Next" />
             </div>
        </div>   
-       </div>  
+       </div> 
 </asp:Content>
+
+

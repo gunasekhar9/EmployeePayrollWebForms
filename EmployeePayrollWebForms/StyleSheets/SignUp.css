@@ -4,16 +4,18 @@
 }
 
 .sec2 {
-    border: 3px solid rgb(0 0 0 / 0.53);
-    background-color: ghostwhite;
+    border: 3px solid White;
+    background-color: #FFFFFF;
     margin-left: 500px;
     margin-right: 600px;
     margin-top: 100px;
     margin-bottom: 110px;
-    padding-left: 75px;
+    padding-left: 50px;
+    padding-right: 35px;
     padding-top: 30px;
-    padding-bottom: 50px;
-    width:500px;
+    padding-bottom: 30px;
+    width: 504px;
+    height: 371px;
 }
 
 footer {

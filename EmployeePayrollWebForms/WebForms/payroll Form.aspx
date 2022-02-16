@@ -80,7 +80,7 @@
         </div>
         <br />
         <div>
-            <asp:Label ID="Label7" required="required" runat="server" Text="Notes"></asp:Label>
+            <asp:Label ID="Label7" runat="server" Text="Notes"></asp:Label>
             &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
             <asp:TextBox ID="TextBox2" type="text" name="notes" runat="server" TextMode="MultiLine" Width="490px" Height="70px"></asp:TextBox>
         </div>
