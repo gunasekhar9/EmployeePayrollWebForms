@@ -20,7 +20,9 @@
             </div>
        <input type="checkbox" value="lsRememberMe" id="rememberMe">Remember me<label for="rememberMe"></label>
     <br />
-    <div><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Create Account</asp:LinkButton>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Log in" /></div>
+    <div><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Create Account</asp:LinkButton>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Log in" />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+            </div>
     </div>
     </div>
 </asp:Content>
