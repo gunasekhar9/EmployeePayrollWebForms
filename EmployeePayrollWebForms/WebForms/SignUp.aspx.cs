@@ -29,7 +29,7 @@ namespace EmployeePayrollWebForms.WebForms
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@Firstname", TextBox1.Text);
             com.Parameters.AddWithValue("@Lastname", TextBox2.Text);
-            com.Parameters.AddWithValue("@Username", TextBox3.Text);
+            com.Parameters.AddWithValue("@Email", TextBox3.Text);
             com.Parameters.AddWithValue("@Phone", TextBox6.Text);
             com.Parameters.AddWithValue("@Password", TextBox4.Text);
             con.Open();

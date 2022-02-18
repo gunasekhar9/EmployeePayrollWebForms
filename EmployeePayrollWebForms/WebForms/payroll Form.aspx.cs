@@ -17,21 +17,21 @@ namespace EmployeePayrollWebForms.WebForms
         {
             if (!Page.IsPostBack)
             {
-                //Fill -- Years
+                //Fill For Years
                 for (int i = 2000; i <= 2022; i++)
                 {
                     ddlYear.Items.Add(i.ToString());
                 }
-                ddlYear.Items.FindByValue(System.DateTime.Now.Year.ToString()).Selected = true;  //set current year as selected
+                ddlYear.Items.FindByValue(System.DateTime.Now.Year.ToString()).Selected = true;  //sets that current year as selected one
 
-                //Fill -- Months
+                //Fill For Months
                 for (int i = 1; i <= 12; i++)
                 {
                     ddlMonth.Items.Add(i.ToString());
                 }
-                ddlMonth.Items.FindByValue(System.DateTime.Now.Month.ToString()).Selected = true; // Set current month as selected
+                ddlMonth.Items.FindByValue(System.DateTime.Now.Month.ToString()).Selected = true; // Set that current month as selected one 
 
-                //Fill -- days
+                //Fill For days
                 FillDays();
             }
         }
@@ -47,7 +47,7 @@ namespace EmployeePayrollWebForms.WebForms
             {
                 ddlDay.Items.Add(i.ToString());
             }
-            ddlDay.Items.FindByValue(System.DateTime.Now.Day.ToString()).Selected = true;// Set current date as selected
+            ddlDay.Items.FindByValue(System.DateTime.Now.Day.ToString()).Selected = true;// Set hat current date as selected one
         }
 
         protected void ddlYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,25 +62,7 @@ namespace EmployeePayrollWebForms.WebForms
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand com = new SqlCommand("EmployeePayroll", con);
-            com.CommandType = System.Data.CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Name", TextBox1.Text);
-            com.Parameters.AddWithValue("@Department", CheckBoxList1.Text);
-            com.Parameters.AddWithValue("@Salary", DropDownList1.Text);
-            com.Parameters.AddWithValue("@Notes", TextBox2.Text);
-            con.Open();
-            var k = com.ExecuteNonQuery();
-            if (k != 0)
-            {
-                Label8.Text = "Payroll Registered : and Inserted into the Database Successfully";
-                Label8.ForeColor = System.Drawing.Color.Green;
-            }
-            else
-            {
-                Label8.Text = "Payroll is not Created and not inserted in the Database!";
-                Label8.ForeColor = System.Drawing.Color.Red;
-            }
-            con.Close();
+
         }
     }
 }

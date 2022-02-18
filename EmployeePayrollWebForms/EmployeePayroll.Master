@@ -23,7 +23,7 @@
         </div>
         <div>
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Gunasekhar</p> 
+                <p>&copy; <%: DateTime.Now.Year %> - by Gunasekhar</p> 
             </footer>
         </div>
     </form>

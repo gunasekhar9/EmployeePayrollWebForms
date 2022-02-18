@@ -18,10 +18,11 @@
         <small>You can use letters, numbers & periods</small>
            <br />
                <div>
-                   <asp:TextBox ID="TextBox6" type="text" placeholder="Phone" required="required" runat="server"></asp:TextBox><asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox6" ForeColor="Red" ValidationExpression="[6-9]{1}[0-9]{9}"></asp:RegularExpressionValidator>
+                   <asp:TextBox ID="TextBox6" type="text" placeholder="Phone" required="required" runat="server" Height="33px" Width="377px"></asp:TextBox>
                </div>
                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox4" ForeColor="Red" ValidationExpression="^(?=.*[A-Z]).{8,}$"></asp:RegularExpressionValidator>
                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox5" ForeColor="Red" ValidationExpression="^(?=.*[A-Z]).{8,}$"></asp:RegularExpressionValidator>
+               <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Enter valid input" ControlToValidate="TextBox6" ForeColor="Red" ValidationExpression="[6-9]{1}[0-9]{9}"></asp:RegularExpressionValidator>
            <br />
         <div>
             <asp:TextBox ID="TextBox4" type="text" placeholder="Password" required="required" runat="server" Height="33px" Width="186px"></asp:TextBox>
@@ -34,7 +35,7 @@
             <div>
                 <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign in instead</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Next" OnClick="Button1_Click" />
-                <asp:Label ID="Label3" runat="server" Text=""> </asp:Label>
+                <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
             </div>
        </div>   
        </div> 
