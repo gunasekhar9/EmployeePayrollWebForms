@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +11,8 @@ namespace EmployeePayrollWebForms.WebForms
 {
     public partial class payroll_Form : System.Web.UI.Page
     {
+        static string str = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection(str);
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -54,6 +58,29 @@ namespace EmployeePayrollWebForms.WebForms
         protected void ddlMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillDays();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("EmployeePayroll", con);
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@Name", TextBox1.Text);
+            com.Parameters.AddWithValue("@Department", CheckBoxList1.Text);
+            com.Parameters.AddWithValue("@Salary", DropDownList1.Text);
+            com.Parameters.AddWithValue("@Notes", TextBox2.Text);
+            con.Open();
+            var k = com.ExecuteNonQuery();
+            if (k != 0)
+            {
+                Label8.Text = "Payroll Registered : and Inserted into the Database Successfully";
+                Label8.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                Label8.Text = "Payroll is not Created and not inserted in the Database!";
+                Label8.ForeColor = System.Drawing.Color.Red;
+            }
+            con.Close();
         }
     }
 }

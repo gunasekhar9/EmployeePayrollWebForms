@@ -8,7 +8,7 @@
     <div><h4>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Sign in</h4></div>
     <div><p>&nbsp;&nbsp;&nbsp;&nbsp; to continue with Employee Payroll</p></div>
     <div>
-        <asp:TextBox ID="TextBox1" type="text" placeholder="Email or Phone" required="required" runat="server" Height="36px" Width="277px" ForeColor="Red"></asp:TextBox> 
+        <asp:TextBox ID="TextBox1" type="text" placeholder="Email" required="required" runat="server" Height="36px" Width="277px" ForeColor="Red"></asp:TextBox> 
     </div>
       <br />
     <div>
@@ -20,8 +20,8 @@
             </div>
        <input type="checkbox" value="lsRememberMe" id="rememberMe">Remember me<label for="rememberMe"></label>
     <br />
-    <div><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Create Account</asp:LinkButton>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Log in" />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    <div><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Create Account</asp:LinkButton>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Log in" OnClick="Button1_Click" />
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
             </div>
     </div>
     </div>

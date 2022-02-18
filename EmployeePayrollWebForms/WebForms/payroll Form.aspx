@@ -24,7 +24,8 @@
                 <asp:ListItem> <img src="../Assets/profile-images/Male (4).png" alt="img2"/></asp:ListItem>
                 <asp:ListItem> <img src="../Assets/profile-images/Female (4).png" alt="img3"/></asp:ListItem>
                 <asp:ListItem> <img src="../Assets/profile-images/Male (5).png" alt="img4"/></asp:ListItem>
-            </asp:RadioButtonList><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please select image" ControlToValidate="RadioButtonList1" ForeColor="Red">Please select image</asp:RequiredFieldValidator> 
+            </asp:RadioButtonList>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please select image" ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator> 
         </div>
         <br />
         <br />
@@ -83,12 +84,13 @@
             <asp:Label ID="Label7" runat="server" Text="Notes"></asp:Label>
             &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
             <asp:TextBox ID="TextBox2" type="text" name="notes" runat="server" TextMode="MultiLine" Width="490px" Height="70px"></asp:TextBox>
+            <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
         </div>
         <br />
         <div class="sec3">
             <asp:Button ID="Button1" runat="server" class="btn button" Text="Cancel" Width="120px" />
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <asp:Button ID="Button2" runat="server" class="btn submit" Text="Submit" Width="120px" />
+            <asp:Button ID="Button2" runat="server" class="btn submit" Text="Submit" Width="120px" OnClick="Button2_Click" />
             &ensp;
             <asp:Button ID="Button3" runat="server" class="btn button" Text="Reset" Width="120px" />
         </div>
