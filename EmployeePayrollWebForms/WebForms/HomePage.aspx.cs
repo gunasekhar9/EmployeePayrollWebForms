@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,13 +13,8 @@ namespace EmployeePayrollWebForms.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource = Session["AddLogin"];
-            GridView1.DataBind();
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            GridView2.DataSource = Session["AddLog"];
+            GridView2.DataBind();
         }
     }
 }

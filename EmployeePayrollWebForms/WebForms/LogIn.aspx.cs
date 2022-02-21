@@ -30,19 +30,14 @@ namespace EmployeePayrollWebForms.WebForms
             com.Parameters.AddWithValue("@Password", TextBox2.Text);
             con.Open();
             var datareader = com.ExecuteReader();
-           
-
             if (datareader != null)
             {
-                Session["AddLogin"] = datareader;
+                Session["AddLog"] = datareader;       
                 Response.Redirect("HomePage.aspx");
-
-               // Label1.Text = "LogIn crendentials are sended into the Database Successfully";
-               // Label1.ForeColor = System.Drawing.Color.Blue;
             }
             else
             {
-                Label1.Text = "Invalid Account and it is in the Database!";
+                Label1.Text = " Unable to LogIn, because this account is not in the database";
                 Label1.ForeColor = System.Drawing.Color.Red;
             }
             con.Close();

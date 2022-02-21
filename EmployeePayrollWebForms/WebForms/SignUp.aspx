@@ -32,13 +32,12 @@
         <div>
         <div><asp:CheckBox ID="CheckBox1" runat="server" /><asp:Label ID="Label2" runat="server" Text="Show Password"></asp:Label></div>
             <br />
-            <div>
-                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign in instead</asp:LinkButton>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Next" OnClick="Button1_Click" />
+        <div>
+        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign in instead</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Next" OnClick="Button1_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
             </div>
-       </div>   
+       </div> 
        </div> 
 </asp:Content>
-
-

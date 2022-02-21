@@ -37,7 +37,7 @@ namespace EmployeePayrollWebForms.WebForms
             if(k != 0)
             {
                 Label3.Text = "New Account Created : and Inserted into the Database Successfully";
-                Label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+                Label3.ForeColor = System.Drawing.Color.ForestGreen;
             }
             else
             {

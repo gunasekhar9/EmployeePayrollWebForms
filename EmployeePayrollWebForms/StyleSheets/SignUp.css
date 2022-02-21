@@ -1,8 +1,11 @@
-﻿
+﻿body{
+    font-family:Arial,Helvect,sans-serif;
+}
+input[type=text], input[type=password] {
+}
 .sec1 {
     color: navy;
 }
-
 .sec2 {
     border: 3px solid White;
     background-color: #FFFFFF;
@@ -13,7 +16,7 @@
     padding-left: 50px;
     padding-right: 35px;
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 400px;
     width: 504px;
     height: 371px;
 }

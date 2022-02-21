@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -63,6 +64,28 @@ namespace EmployeePayrollWebForms.WebForms
         protected void Button2_Click(object sender, EventArgs e)
         {
 
+            SqlCommand com = new SqlCommand("AddForm", con);
+            com.CommandType = CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@NAME", TextBox1.Text);
+            com.Parameters.AddWithValue("@GENDER", RadioButtonList2.SelectedValue);
+            com.Parameters.AddWithValue("@DEPARTMENT", CheckBoxList1.SelectedValue);
+            com.Parameters.AddWithValue("@SALARY", DropDownList1.SelectedValue);
+            com.Parameters.AddWithValue("@STARTDATE", ddlDay.SelectedValue + '-' + ddlMonth.SelectedValue + '-' + ddlYear.SelectedValue);
+            com.Parameters.AddWithValue("@NOTES", TextBox2.Text);
+            con.Open();
+            var k = com.ExecuteNonQuery();
+            if (k >= 1)
+            {
+                var datareader = com.ExecuteReader();
+                Session["AddForm"] = datareader;
+                Response.Redirect("HomePage.aspx");
+            }
+            else
+            {
+                Label1.Text = "User Doen't Exist in this Data";
+                Label1.ForeColor = System.Drawing.Color.Red;
+            }
+            con.Close();
         }
     }
 }

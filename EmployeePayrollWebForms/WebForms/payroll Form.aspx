@@ -20,10 +20,10 @@
             <asp:Label ID="Label2" runat="server" Text="Profile image"></asp:Label>
             &ensp;
             <asp:RadioButtonList ID="RadioButtonList1"  runat="server" CellPadding="1" CellSpacing="1" RepeatDirection="Horizontal" RepeatLayout="Flow" CssClass="rbl">
-                <asp:ListItem> <img src="../Assets/profile-images/Female (1).png" alt="img1"/></asp:ListItem>
-                <asp:ListItem> <img src="../Assets/profile-images/Male (4).png" alt="img2"/></asp:ListItem>
-                <asp:ListItem> <img src="../Assets/profile-images/Female (4).png" alt="img3"/></asp:ListItem>
-                <asp:ListItem> <img src="../Assets/profile-images/Male (5).png" alt="img4"/></asp:ListItem>
+                <asp:ListItem Value="../Assets/profile-images/Female (1).png"> <img src="../Assets/profile-images/Female (1).png" alt="img1"/></asp:ListItem>
+                <asp:ListItem Value="../Assets/profile-images/Male (4).png"> <img src="../Assets/profile-images/Male (4).png" alt="img2"/></asp:ListItem>
+                <asp:ListItem Value="../Assets/profile-images/Female (4).png"> <img src="../Assets/profile-images/Female (4).png" alt="img3"/></asp:ListItem>
+                <asp:ListItem Value="../Assets/profile-images/Male (5).png"> <img src="../Assets/profile-images/Male (5).png" alt="img4"/></asp:ListItem>
             </asp:RadioButtonList>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please select image" ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator> 
         </div>
@@ -33,20 +33,20 @@
             <asp:Label ID="Label3" runat="server" Text="Gender"></asp:Label>
             &emsp;&emsp;&ensp;
             <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal" CellPadding="1" CellSpacing="1" RepeatLayout="Flow" CssClass="rbm">
-                <asp:ListItem>Male</asp:ListItem>
-                <asp:ListItem>Female</asp:ListItem>
+                <asp:ListItem Value="Male">Male</asp:ListItem>
+                <asp:ListItem Value="Female">Female</asp:ListItem>
             </asp:RadioButtonList><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please select Gender" ControlToValidate="RadioButtonList2" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
         <br />
         <div>
             <asp:Label ID="Label4" runat="server" Text="Department"></asp:Label>
             &ensp;&ensp;&nbsp;
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" CellPadding="1" CellSpacing="1" RepeatDirection="Horizontal" RepeatLayout="Flow" CssClass="rbn">
-                <asp:ListItem>HR</asp:ListItem>
-                <asp:ListItem>Sales</asp:ListItem>
-                <asp:ListItem>Finance</asp:ListItem>
-                <asp:ListItem>Engineer</asp:ListItem>
-                <asp:ListItem>Others</asp:ListItem>
+            <asp:CheckBoxList  ID="CheckBoxList1" runat="server" CellPadding="1" CellSpacing="1" RepeatDirection="Horizontal" RepeatLayout="Flow" CssClass="rbn">
+                <asp:ListItem Value="HR">HR</asp:ListItem>
+                <asp:ListItem Value="Sales">Sales</asp:ListItem>
+                <asp:ListItem Value="Finance">Finance</asp:ListItem>
+                <asp:ListItem Value="Engineer">Engineer</asp:ListItem>
+                <asp:ListItem Value="Others">Others</asp:ListItem>
             </asp:CheckBoxList>
         </div>
         <br />

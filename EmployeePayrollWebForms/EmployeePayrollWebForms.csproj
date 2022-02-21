@@ -125,6 +125,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="EmployeePayroll.Master" />
+    <Content Include="StyleSheets\HomePage.css" />
     <Content Include="StyleSheets\Payroll Form.css" />
     <Content Include="StyleSheets\SignUp.css" />
     <Content Include="UserControl.ascx" />

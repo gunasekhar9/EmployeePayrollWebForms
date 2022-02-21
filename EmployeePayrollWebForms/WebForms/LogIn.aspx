@@ -8,12 +8,11 @@
     <div><h4>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Sign in</h4></div>
     <div><p>&nbsp;&nbsp;&nbsp;&nbsp; to continue with Employee Payroll</p></div>
     <div>
-        <asp:TextBox ID="TextBox1" type="text" placeholder="Email" required="required" runat="server" Height="36px" Width="277px" ForeColor="Red"></asp:TextBox> 
+        <asp:TextBox ID="TextBox1" type="text" placeholder="Email" required="required" runat="server" Height="36px" Width="277px" ForeColor="Black"></asp:TextBox><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter valid email" ControlToValidate="TextBox1" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator> 
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter valid Password" ForeColor="Red" ValidationExpression="^(?=.*[A-Z]).{8,}$"></asp:RegularExpressionValidator>
     </div>
-      <br />
     <div>
-        <asp:TextBox ID="TextBox2" type="text" placeholder="Password" required="required" runat="server" Height="36px" Width="277px" ForeColor="Red"></asp:TextBox>
-        &nbsp;
+        <asp:TextBox ID="TextBox2" type="text" placeholder="Password" required="required" runat="server" Height="36px" Width="277px" ForeColor="Black"></asp:TextBox>
         <asp:CheckBox ID="CheckBox1" runat="server" />
         Show Password&nbsp;&nbsp;
         <asp:LinkButton ID="LinkButton1" runat="server">Forgot Password?</asp:LinkButton>

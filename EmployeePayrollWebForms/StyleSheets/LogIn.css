@@ -2,9 +2,12 @@
     font-family:Arial,Helvect,sans-serif;
 }
 input[type=text], input[type=password] {
-}
-.sec1{
-    color:navy;
+    width: 82%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 .sec2 {
     border: #F7F7F7;
