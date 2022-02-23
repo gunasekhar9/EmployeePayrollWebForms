@@ -7,7 +7,7 @@
     <div class="sec2">
         <form method="post">
         <div class="sec1">
-            <h4>Employee Payroll Form</h4>
+            <strong><h3 style="color:navy">Employee Payroll Form</h3></strong>
         </div>
         <br />
         <div>

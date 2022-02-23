@@ -69,6 +69,21 @@ namespace EmployeePayrollWebForms.WebForms
             com.Parameters.AddWithValue("@NAME", TextBox1.Text);
             com.Parameters.AddWithValue("@PROFILEIMAGE", RadioButtonList1.SelectedValue);
             com.Parameters.AddWithValue("@GENDER", RadioButtonList2.SelectedValue);
+            string checkList = "";
+            for (int i = 0; i < CheckBoxList1.Items.Count; i++)
+            {
+                if (CheckBoxList1.Items[i].Selected)
+                {
+                    if (checkList == "")
+                    {
+                        checkList = CheckBoxList1.Items[i].Value;
+                    }
+                    else
+                    {
+                        checkList += " " + CheckBoxList1.Items[i].Value;
+                    }
+                }
+            }
             com.Parameters.AddWithValue("@DEPARTMENT", CheckBoxList1.SelectedValue);
             com.Parameters.AddWithValue("@SALARY", DropDownList1.SelectedValue);
             com.Parameters.AddWithValue("@STARTDATE", ddlDay.SelectedValue + '-' + ddlMonth.SelectedValue + '-' + ddlYear.SelectedValue);
@@ -77,6 +92,7 @@ namespace EmployeePayrollWebForms.WebForms
             var k = com.ExecuteNonQuery();
             if (k >= 1)
             {
+                com = new SqlCommand("select * from EmployeeForm",con);
                 var datareader = com.ExecuteReader();
                 Session["AddForm"] = datareader;
                 Response.Redirect("HomePage.aspx");

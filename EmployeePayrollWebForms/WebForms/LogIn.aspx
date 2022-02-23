@@ -12,7 +12,7 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter valid Password" ForeColor="Red" ValidationExpression="^(?=.*[A-Z]).{8,}$"></asp:RegularExpressionValidator>
     </div>
     <div>
-        <asp:TextBox ID="TextBox2" type="text" placeholder="Password" required="required" runat="server" Height="36px" Width="277px" ForeColor="Black"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" type="password" placeholder="Password" required="required" runat="server" Height="36px" Width="277px" ForeColor="Black"></asp:TextBox>
         <asp:CheckBox ID="CheckBox1" runat="server" />
         Show Password&nbsp;&nbsp;
         <asp:LinkButton ID="LinkButton1" runat="server">Forgot Password?</asp:LinkButton>

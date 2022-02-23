@@ -5,8 +5,12 @@
     margin-top: 30px;
     margin-left: 188px;
     width: 217px;
-    height: 37px;
+    height: 67px;
     font: normal normal bold 28px/25px Roboto;
+}
+.addUser {
+    background-color: #82A70C;
+    color:white;
 }
 .grid {
     margin-left:149px;

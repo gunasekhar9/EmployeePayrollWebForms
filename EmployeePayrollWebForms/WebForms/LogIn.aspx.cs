@@ -32,7 +32,7 @@ namespace EmployeePayrollWebForms.WebForms
             var datareader = com.ExecuteReader();
             if (datareader != null)
             {
-                Session["AddLog"] = datareader;       
+                Session["AddForm"] = datareader;       
                 Response.Redirect("HomePage.aspx");
             }
             else

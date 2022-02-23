@@ -13,8 +13,8 @@ namespace EmployeePayrollWebForms.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView2.DataSource = Session["AddLog"];
-            GridView2.DataBind();
+            GridView1.DataSource = Session["AddForm"];
+            GridView1.DataBind();
         }
 
         protected void Button4_Click(object sender, EventArgs e)
