@@ -36,12 +36,12 @@ namespace EmployeePayrollWebForms.WebForms
             var k = com.ExecuteNonQuery();
             if(k != 0)
             {
-                Label3.Text = "New Account Created : and Inserted into the Database Successfully";
+                Label3.Text = "Your Account is Created Successfully!";
                 Label3.ForeColor = System.Drawing.Color.ForestGreen;
             }
             else
             {
-                Label3.Text = "Account is not Created and not inserted in the Database!";
+                Label3.Text = "Something went wrong please try again.";
                 Label3.ForeColor = System.Drawing.Color.Red;
             }
             con.Close();

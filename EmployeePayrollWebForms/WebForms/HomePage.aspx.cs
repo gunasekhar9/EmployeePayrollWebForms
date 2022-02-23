@@ -16,5 +16,20 @@ namespace EmployeePayrollWebForms.WebForms
             GridView2.DataSource = Session["AddLog"];
             GridView2.DataBind();
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Payroll Form.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }

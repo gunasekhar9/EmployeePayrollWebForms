@@ -84,11 +84,11 @@
             <asp:Label ID="Label7" runat="server" Text="Notes"></asp:Label>
             &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
             <asp:TextBox ID="TextBox2" type="text" name="notes" runat="server" TextMode="MultiLine" Width="490px" Height="70px"></asp:TextBox>
-            <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label8" runat="server" Text=""></asp:Label>
         </div>
         <br />
         <div class="sec3">
-            <asp:Button ID="Button1" runat="server" class="btn button" Text="Cancel" Width="120px" />
+            <asp:Button ID="Button1" runat="server" class="btn button" Text="Cancel" Width="120px" OnClick="Button1_Click" />
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <asp:Button ID="Button2" runat="server" class="btn submit" Text="Submit" Width="120px" OnClick="Button2_Click" />
             &ensp;

@@ -4,34 +4,65 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="head">
-         <p>Employee Information</p>
+         <strong><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Employee Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  <asp:Button ID="Button4" class="btn btn-success add  User" runat="server" Text="+ Add User" OnClick="Button4_Click" />         
+
+         </h4></strong>&emsp;          
+
      </div>
     <br />
-    <div class="grid">
-        <div>
-            <asp:GridView ID="GridView2" runat="server" BackColor="Aqua" BorderColor="#999999" BorderStyle="Solid" CellPadding="4" CellSpacing="2" ForeColor="#003300" GridLines="Horizontal" HorizontalAlign="Center"></asp:GridView>
+     <div class="grid">
+         <div>
+             <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                 <AlternatingRowStyle BackColor="White" />
+                 <EditRowStyle BackColor="#7C6F57" />
+                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                 <RowStyle BackColor="#E3EAEB" />
+                 <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                 <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                 <SortedAscendingHeaderStyle BackColor="#246B61" />
+                 <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                 <SortedDescendingHeaderStyle BackColor="#15524A" />
+             </asp:GridView>
         </div>
        <div>
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="950px" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
-            <AlternatingRowStyle BackColor="White" />
+            <asp:GridView ID="GridView1" runat="server" CellPadding="4" GridLines="Horizontal" Width="950px" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="NAME" HeaderText="NAME" SortExpression="NAME" />
+                <asp:TemplateField HeaderText="PROFILEIMAGE" SortExpression="PROFILEIMAGE">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("PROFILEIMAGE") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Height="50px" ImageUrl='<%# Eval("PROFILEIMAGE") %>' Width="50px" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="GENDER" HeaderText="GENDER" SortExpression="GENDER" />
                 <asp:BoundField DataField="DEPARTMENT" HeaderText="DEPARTMENT" SortExpression="DEPARTMENT" />
                 <asp:BoundField DataField="SALARY" HeaderText="SALARY" SortExpression="SALARY" />
                 <asp:BoundField DataField="STARTDATE" HeaderText="STARTDATE" SortExpression="STARTDATE" />
                 <asp:BoundField DataField="NOTES" HeaderText="NOTES" SortExpression="NOTES" />
+                <asp:TemplateField HeaderText="Actions">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                   <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" ImageUrl="../Assets/icons/delete-black-18dp.svg" ImageAlign="NotSet"/>&emsp;&nbsp;
+                    <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ImageButton2_Click" ImageUrl="../Assets/icons/create-black-18dp.svg" ImageAlign="NotSet" />
+                </ItemTemplate>
+            </asp:TemplateField>
             </Columns>
-            <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-            <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-            <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-            <SortedAscendingCellStyle BackColor="#FDF5AC" />
-            <SortedAscendingHeaderStyle BackColor="#4D0000" />
-            <SortedDescendingCellStyle BackColor="#FCF6C0" />
-            <SortedDescendingHeaderStyle BackColor="#820000" />
+                <FooterStyle BackColor="White" ForeColor="#333333" />
+                <HeaderStyle BackColor="#42515F" Font-Bold="True" ForeColor="#FFFFFF" />
+                <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="White" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#487575" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#275353" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myconnection %>" SelectCommand="SELECT * FROM [EmployeeForm]"></asp:SqlDataSource>
         </div>

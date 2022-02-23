@@ -67,6 +67,7 @@ namespace EmployeePayrollWebForms.WebForms
             SqlCommand com = new SqlCommand("AddForm", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@NAME", TextBox1.Text);
+            com.Parameters.AddWithValue("@PROFILEIMAGE", RadioButtonList1.SelectedValue);
             com.Parameters.AddWithValue("@GENDER", RadioButtonList2.SelectedValue);
             com.Parameters.AddWithValue("@DEPARTMENT", CheckBoxList1.SelectedValue);
             com.Parameters.AddWithValue("@SALARY", DropDownList1.SelectedValue);
@@ -82,10 +83,15 @@ namespace EmployeePayrollWebForms.WebForms
             }
             else
             {
-                Label1.Text = "User Doen't Exist in this Data";
+                Label1.Text = "User Doesn't Exist in this Data";
                 Label1.ForeColor = System.Drawing.Color.Red;
             }
             con.Close();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
         }
     }
 }
