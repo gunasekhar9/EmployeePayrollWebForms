@@ -1,0 +1,121 @@
+------------------------------------------dashboard.aspx.cs-----------------------------------------------
+
+namespace WebApplication2
+{
+    public partial class bill : System.Web.UI.Page
+    {
+        static string str = ConfigurationManager.ConnectionStrings["InterviewConnectionString"].ConnectionString;
+        SqlConnection con = new SqlConnection(str);
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("AddD", con);
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@billno", TextBox1.Text);
+            com.Parameters.AddWithValue("@Name", TextBox2.Text);
+            con.Open();
+            var k = com.ExecuteNonQuery();
+            if (k != 0)
+            {
+                Label1.Text = "Your Account is Created Successfully!";
+                Label1.ForeColor = System.Drawing.Color.ForestGreen;
+            }
+            else
+            {
+                Label1.Text = "Something went wrong please try again.";
+                Label1.ForeColor = System.Drawing.Color.Red;
+            }
+            con.Close();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("updateD", con);
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@billno", TextBox1.Text);
+            com.Parameters.AddWithValue("@Name", TextBox2.Text);
+            con.Open();
+            var k = com.ExecuteNonQuery();
+            if (k != 0)
+            {
+                Label1.Text = "Your Account is updated Successfully!";
+                Label1.ForeColor = System.Drawing.Color.ForestGreen;
+            }
+            else
+            {
+                Label1.Text = "Something went wrong please try again.";
+                Label1.ForeColor = System.Drawing.Color.Red;
+            }
+            con.Close();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("search", con);
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@billno", TextBox1.Text);
+            con.Open();
+            var da = com.ExecuteReader();
+            if (da.HasRows)
+            {
+                GridView1.DataSource = da;
+                GridView1.DataBind();
+            }
+            else
+            {
+                Label1.Text = "Something went wrong please try again.";
+                Label1.ForeColor = System.Drawing.Color.Red;
+            }
+            con.Close();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Request.Url.AbsoluteUri);
+        }
+    }
+}
+
+
+
+-----------------------------------dashboard.aspx----------------------------------------------------
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/patient.Master" AutoEventWireup="true" CodeBehind="bill.aspx.cs" Inherits="WebApplication2.bill" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="bill.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="row">
+        <asp:Label ID="Label1" runat="server" Text="billno"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="Name"></asp:Label>
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+    </div>
+    <div>
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Update" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="search" OnClick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="clear" OnClick="Button4_Click" />
+        <br />
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+    </div>
+    
+
+</asp:Content>
+
+
+
+
+
+
+
+
