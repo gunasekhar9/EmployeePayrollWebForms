@@ -3,7 +3,8 @@
     <link href="../StyleSheets/LogIn.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="form">
+    <formview>
+        <div class="form">
         <div class="sec2">
     <div><h4>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Sign in</h4></div>
     <div><p>&nbsp;&nbsp;&nbsp;&nbsp; to continue with Employee Payroll</p></div>
@@ -24,4 +25,5 @@
             </div>
     </div>
     </div>
+    </formview>
 </asp:Content>
