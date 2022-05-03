@@ -44,7 +44,7 @@ Create Table PatientBills
 BillNumber int primary key not null identity(1,1),
 PatientId int foreign key references PatientDetails(PatientId),
 Fees int,
-BillDate date not null default getdate()
+BillDate datetime not null default getdate()
 )
 
 select * from PatientBills
